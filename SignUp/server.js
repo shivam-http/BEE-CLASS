@@ -2,6 +2,7 @@ const express=require ("express")
 const app =express();
 //middleware to parse urlencoded data
 app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 app.get("/signup",(req,res)=>{
     res.sendFile(__dirname+"/signup.html")  //__dirname set the current directory
 })
